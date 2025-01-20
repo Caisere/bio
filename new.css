@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: hsl(230, 28%, 12%);
+    --primaryColor: rgb(87, 110, 224);
+    --textColor: #ffffff;
+    --hoverColor: #ffffff;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-family: Arial, sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5); /* For better readability on scroll */
+}
+
+header nav {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+header ul a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+header ul a:hover {
+    color: var(--primaryColor);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 100px; /* Offset for fixed header */
+}
+
+main .my-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 70px 0;
+    width: 80%;
+}
+
+main .my-details .my--details-con {
+    display: grid;
+    grid-template-columns: 80px 300px 1fr;
+    gap: 3rem;
+    width: 100%;
+}
+
+main .aboutme, 
+main .whyAltschool, 
+main .my-goals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+/* Responsive Design for All Screen Sizes */
+@media (max-width: 1200px) {
+    header {
+        width: 95%;
+    }
+
+    main .my-details .my--details-con {
+        grid-template-columns: 70px 200px 1fr;
+        gap: 2rem;
+    }
+
+    main .aboutme p, 
+    main .my-goals .para {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 1rem;
+    }
+
+    main .my-details {
+        gap: 2rem;
+    }
+
+    main .my-details .my--details-con {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    main .aboutme p,
+    main .my-goals .para {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    main {
+        margin-top: 80px; /* Adjust for smaller header */
+    }
+
+    main .my-details {
+        width: 90%;
+    }
+
+    main .my-details .my--details-con {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .aboutme p,
+    main .my-goals .para {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    header nav {
+        padding: 0.5rem 1rem;
+    }
+
+    main .my-details .my--details-con {
+        gap: 1rem;
+    }
+
+    main .aboutme p,
+    main .my-goals .para {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    main .my-goals .my-goals-con ul {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main .my-details {
+        margin: 50px 0;
+    }
+
+    main .my-details .my--details-con {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    main .aboutme h1, 
+    main .whyAltschool h1, 
+    main .my-goals h1 {
+        font-size: 1.8rem;
+    }
+}
