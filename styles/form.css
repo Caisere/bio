@@ -1,0 +1,238 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: Lato, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul a:link,
+header nav ul a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+header nav ul span{
+    text-decoration: none;
+    color: red;
+    margin-left: 30px;
+    font-size: 2rem;
+    transition: all .2s;
+    animation: moveIn 2s ease-in-out forwards infinite;
+}
+
+
+@keyframes moveIn {
+    to {
+        margin-left: 0;
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+@media (max-width: 998px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+main .first-container,
+main .second-container {
+    width: 100%;
+    /* flex: 1; */
+}
+
+main .first-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   padding: 1.5rem;
+   /* background-color: rgba(244, 221, 225, .2); */
+}
+
+@media (max-width: 998px) {
+    main .first-container {
+        display: none;
+        /* background-color: rgba(244, 221, 225, .2); */
+    }
+}
+
+
+@media (max-width: 600px) {
+    main .first-container {
+        display: none;
+        /* background-color: rgba(244, 221, 225, .2); */
+    }
+}
+
+main .first-container img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}   
+
+main .first-container h1{
+    text-align: center;
+    font-size: 3rem;
+}  
+
+main .first-container .socials{
+    display: flex;
+    gap: 1rem;
+}  
+
+main .first-container .socials i{
+    color: #0367f2;
+    font-size: 1.1rem;
+} 
+
+main .first-container p{
+    font-weight: bold;
+} 
+
+main .second-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+@media (max-width: 600px) {
+    main .second-container {
+        padding: .4rem;
+    }
+}
+
+@media (max-width: 998px) {
+    main .second-container {
+        padding: .4rem;
+    }
+}
+
+
+main .second-container h4{
+    align-self: flex-end;
+}
+
+@media (max-width: 600px) {
+    main .second-container h4{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 998px) {
+    main .second-container h4{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+main .second-container a:link,
+main .second-container a:visited{
+    text-decoration: none;
+    color: #0367f2;
+}
+
+main .second-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+main .second-container form .form--content{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 998px) {
+    main .second-container form .form--content{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main .second-container form .form--content{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+        gap: 1rem;
+    }
+}
+
+form h1{
+    font-size: 2rem;
+}
+
+main .second-container form .form--content div,
+main .second-container form .about-us{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem; 
+}
+
+main .second-container form .form--content div label,
+main .second-container form .about-us label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+main .second-container form .form--content div input,
+main .second-container form .form--content div select,
+main .second-container form .about-us input{
+    padding: .6rem;
+    outline: 1px solid #e2e2e2;
+    border-radius: 6px;
+    border: none;
+}
+
+main .second-container p {
+    color: #718096;
+}
+
+main .second-container p span a{
+    color: #0367f2;
+}
+
+main .second-container .signup{
+    color: #fff !important;
+    text-align: center;
+    background-color: #0367f2;
+    padding: .8rem;
+    border-radius: 10px;
+}
+
+

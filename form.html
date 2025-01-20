@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><span>&larr;</span></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="first-container">
+                <div><img src="assets/images/Educationcc.jpeg" alt=""></div>
+                <h1>Learn highly sought after skills without hassle</h1>
+                <div class="socials">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+                <p>2025 &copy; AltSchool Africa. All right reserved.</p>
+            </div>
+
+            <div class="second-container">
+                <h4>Already an AltScholar? <span><a href="#"> Sign in!</a></span></h4>
+                <form action="">
+                    <div class="form--header">
+                        <h1>Signup</h1>
+                        <p>Take the next steps to apply at AltSchool Africa.</p>
+                    </div>
+                    
+                    <div class="form--content">
+                        <div>
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                        </div>
+    
+                        <div>
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="lasttname" id="lastname" placeholder="Last Name">
+                        </div>
+    
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </div>
+    
+                        <div>
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="select-gender">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy">
+                        </div>
+    
+                        <div>
+                            <label for="tel">Phone Number</label>
+                            <input type="tel" name="tel" id="tel" placeholder="Phone Number">
+                        </div>
+    
+                        <div>
+                            <label for="cor">Country of Residence</label>
+                            <input type="text" name="cor" id="cor" placeholder="Country of Residence">
+                        </div>
+    
+                        <div>
+                            <label for="sor">State  of Residence</label>
+                            <input type="text" name="sor" id="sor" placeholder="State of Residence">
+                        </div>
+    
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                        </div>
+    
+                        <div>
+                            <label for="cop">Confirm Password</label>
+                            <input type="password" name="cop" id="cop" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <div class="about-us">
+                        <label for="aboutus?">How did you hear about us?</label>
+                        <input type="text" name="aboutus?" id="aboutus?" placeholder="Optional: Let us know how you found us">
+                    </div>
+
+                    <p>By clicking continue, I agree to <span><a href="#">Terms of use</a></span> and acknowledge that i have read the <span><a href="#">Privacy Policy</a></span></p>
+                    <a class="signup" href="#">Sign up &rarr; </a>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
