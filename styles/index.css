@@ -7,7 +7,11 @@
 body {
     background-color: var(--bgColor);
     color: #ffffff;
-    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
 }
 
 
@@ -19,12 +23,15 @@ body {
     }
 } */
 
+.container {
+    max-width: 1440px;
+}
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 2rem;
 }
 
 
@@ -32,7 +39,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem 0;
     position: fixed;
@@ -41,12 +48,6 @@ header {
     z-index: 9999;
 }
 
-@media (max-width: 600px){
-    header {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 
 
 header nav{
@@ -78,26 +79,45 @@ header ul a:hover{
     border-radius: 20px; */
 }
 
+
+@media (max-width: 600px){
+    header {
+        width: 100%;
+        /* justify-content: baseline; */
+        align-items: start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 0;
+        z-index: 99999;
+        padding: 1.4rem 1rem;
+    }
+
+    header nav{
+        /* border: 1px solid white; */
+        padding: .6rem 1rem;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, .2);
+    }
+    
+    header ul{
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    header ul li a{
+       font-size: .9rem;
+    }
+}
+
+
+
+
 main .my-details {
     gap: 4rem;
     margin: 70px 0;
-}
-
-@media (max-width: 600px){
-    main section {
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px){
-    main .my-details {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        width: 100%;
-        text-align: center;
-    }
 }
 
 
@@ -134,13 +154,6 @@ main .my-details .my--details-con .socials  {
 }
 
 
-@media (max-width: 600px){
-    main .my-details .my--details-con .socials  {
-        flex-direction: row;
-    }
-}
-
-
 main .my-details .my--details-con{
     display: grid;
     grid-template-columns: 80px 300px 1fr;
@@ -150,17 +163,6 @@ main .my-details .my--details-con{
     margin: 0 auto;
 }
 
-@media (max-width: 600px){
-    main .my-details .my--details-con{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        gap: 3rem;
-        width: 40%;
-    }
-}
 
 main .my-details .my--details-con div  {
     align-self: flex-start;
@@ -174,21 +176,6 @@ main .my-details .my--details-con .socials a{
 main .my-details .my--details-con .socials {
     gap: 2rem;
     color: rgb(87, 110, 224);
-}
-
-@media (max-width: 600px){
-    main .my-details .my--details-con .socials {
-       order: 1;
-       margin: 0 auto;
-    }
-}
-
-@media (max-width: 600px){
-    main .my-details .my--details-con .details {
-       order: 3;
-       grid-column: 2;
-       margin: 0 auto;
-    }
 }
 
 
@@ -205,12 +192,6 @@ main .my-details .my--details-con .img-Con  {
     position: relative;
 }
 
-@media (max-width: 600px){
-    main .my-details .my--details-con .img-Con  {
-       order: 2;
-       width: 100%;
-    }
-}
 
 main .my-details .my--details-con .img-div  {
     padding: 1.5rem;
@@ -247,6 +228,64 @@ main .my-details .my--details-con img {
     width: 25%;
 }
 
+
+@media (max-width: 600px){
+    main section {
+        width: 100%;
+    }
+
+    main .my-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    main .my-details .det-heading {
+        font-size: 1.6rem;
+    }
+
+    main .my-details .my--details-con{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 3rem;
+        width: 80%;
+    }
+
+    main .my-details .my--details-con .socials  {
+        flex-direction: row;
+    }
+
+
+    main .my-details .my--details-con .details {
+        order: 3;
+        grid-column: 2;
+        margin: 0 auto;
+    }
+
+
+    main .my-details .my--details-con .details h1,
+    main .my-details .my--details-con .details h2{
+       font-size: 1.2rem;
+    }
+
+    main .my-details .my--details-con .img-Con  {
+        order: 2;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
 main .aboutme {
     display: flex;
     flex-direction: column;
@@ -267,6 +306,12 @@ main .aboutme h1{
     font-size: 2.5rem;
 }
 
+@media (max-width: 600px){
+    main .aboutme h1 {
+        font-size: 1.8rem;
+    }
+}
+
 main .aboutme p {
     text-align: center;
     width: 60%;
@@ -277,7 +322,7 @@ main .aboutme p {
 
 @media (max-width: 600px){
     main .aboutme p {
-        width: 40%;
+        width: 100%;
     }
 }
 
@@ -305,13 +350,13 @@ main .whyAltschool .whyAltschool-con{
 @media (max-width: 600px){
     main .whyAltschool .whyAltschool-con{
         flex-direction: column;
+        width: 80%;
     }
 }
 
 
 main .whyAltschool .whyAltschool-con div{
     flex: 1;
-
 }
 
 main .whyAltschool .whyAltschool-con .why{
@@ -320,11 +365,29 @@ main .whyAltschool .whyAltschool-con .why{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-   
+}
+
+@media (max-width: 600px){
+    main .whyAltschool .whyAltschool-con .why{
+        flex-direction: column;
+        width: 100%;
+        /* align-items: end; */
+    }
 }
 
 main .whyAltschool .whyAltschool-con .why h1{
     font-size: 2.5rem; 
+}
+
+@media (max-width: 600px){
+    main .whyAltschool .whyAltschool-con .why h1{
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    main .whyAltschool .whyAltschool-con .why i{
+        font-size: 3rem; 
+    }
 }
 
 main .whyAltschool .whyAltschool-con .why h1 span{
@@ -343,6 +406,17 @@ main .whyAltschool .whyAltschool-con .why i{
     color: rgb(87, 110, 224);
 }
 
+@media (max-width: 600px){
+    main .whyAltschool .whyAltschool-con .why h1{
+        font-size: 2rem; 
+        text-align: center;
+    }
+
+    main .whyAltschool .whyAltschool-con .why i{
+        font-size: 3rem; 
+    }
+}
+
 @keyframes moveIn {
     to {
         margin-left: 0;
@@ -358,7 +432,6 @@ main .whyAltschool .whyAltschool-con .response{
    
 }
 
-
 main .whyAltschool .whyAltschool-con .response ul{
     width: 90%;
     margin: 30px auto;
@@ -367,15 +440,16 @@ main .whyAltschool .whyAltschool-con .response ul{
 
 @media (max-width: 600px){
     main .whyAltschool .whyAltschool-con .response .outP {
-        width: 60%;
+        width: 100%;
         margin: 30px auto;
         text-align: center;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 600px){
     main .whyAltschool .whyAltschool-con .response ul{
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -392,6 +466,21 @@ main .whyAltschool .whyAltschool-con .response p::first-letter{
     color: rgb(87, 110, 224);
 }
 
+@media (max-width: 600px){
+    main .whyAltschool .whyAltschool-con .response ul li{
+        font-size: 1.2rem;
+    }
+    
+    main .whyAltschool .whyAltschool-con .response p::first-letter{
+        font-size: 1.4rem;
+        color: rgb(87, 110, 224);
+    }
+
+    main .whyAltschool .whyAltschool-con .response p{
+        font-size: .9rem;
+    }
+}
+
 
 main .my-goals {
     display: flex;
@@ -399,6 +488,12 @@ main .my-goals {
     margin: 30px auto;
     width: 90%;
     align-items: center;
+}
+
+@media (max-width: 600px){
+    main .my-goals {
+       width: 100%;
+    }
 }
 
 main .my-goals .my-goals-con{
@@ -411,6 +506,7 @@ main .my-goals .my-goals-con{
 @media (max-width: 600px){
     main .my-goals .my-goals-con{
        width: 80%;
+       gap: 1rem;
     }
 }
 
@@ -421,9 +517,10 @@ main .my-goals .my-goals-con h1{
 
 @media (max-width: 600px){
     main .my-goals .my-goals-con h1{
-        /* margin: 0 auto; */
+        margin: 0 auto;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        width: 100%;
     }
 }
 
@@ -441,7 +538,8 @@ main .my-goals .my-goals-con .para{
 
 @media (max-width: 600px){
     main .my-goals .my-goals-con .para{
-        width: 50%;
+        width: 100%;
+        font-size: .9rem;
     }    
 }
 
@@ -455,12 +553,6 @@ main .my-goals .my-goals-con ul{
     list-style: none;
 }
 
-@media (max-width: 600px){
-    main .my-goals .my-goals-con ul{
-        width: 60%;
-    }
-}
-
 main .my-goals .my-goals-con ul div{
    margin-bottom: 30px;
 }
@@ -472,6 +564,20 @@ main .my-goals .my-goals-con ul div li{
 main .my-goals .my-goals-con ul div li i{
     color: rgb(87, 110, 224);
     margin-right: 10px;
+}
+
+@media (max-width: 600px){
+    main .my-goals .my-goals-con ul{
+        width: 100%;
+    }
+
+    main .my-goals .my-goals-con ul div li{
+        font-size: 1.2rem;
+    }
+
+    main .my-goals .my-goals-con ul div p{
+        font-size: .9rem;
+    }
 }
 
 
